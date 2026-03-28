@@ -1,14 +1,27 @@
 <!DOCTYPE html> <!--Indica al explorador que el documento es HTML5-->
-<html lang="en"> <!-- HTML es la etiqueta principal que engloba al resto de las etiquetas, el atributo lang define el tipo de lenguaje-->
+<html lang="es">
+<!-- HTML es la etiqueta principal que engloba al resto de las etiquetas, el atributo lang define el tipo de lenguaje-->
 
 <head> <!-- Es la cabeza del documento que contiene los metadatos de la pagina web-->
-    <meta charset="UTF-8"> <!-- Indica al navegador que tipo de caracteres contiene la pagina "UTF-8" es un tipo de codificacion que tiene la gran mayoria de caracteres en la gran mayoria de idiomas-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Indica al navegador cómo debe ajustar el tamaño y la escala de la página web según el dispositivo en el que se visualiza -->
+    <meta charset="UTF-8">
+    <!-- Indica al navegador que tipo de caracteres contiene la pagina "UTF-8" es un tipo de codificacion que tiene la gran mayoria de caracteres en la gran mayoria de idiomas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Indica al navegador cómo debe ajustar el tamaño y la escala de la página web según el dispositivo en el que se visualiza -->
     <title>Practica HTML</title> <!-- Muestra el titulo de la pagina, aparece en la solapa del navegador-->
 </head>
 
 <body> <!-- Es el cuerpo del documento donde va a estar todo el contenido que queremos mostrar-->
-    <h1>Hola Mundo! (Esto es un h1)</h1> <!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
+    <h1 id="h1">Hola Mundo! (Esto es un h1)</h1> <!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
+
+    <ul>
+        <li><a href="#parrafo">Parrafos</a></li>
+        <li><a href="#vinculo">Vinculos</a></li>
+        <li><a href="#imagen">Imagenes</a></li>
+        <li><a href="#lista">Listas</a></li>
+        <li><a href="#tabla">Tablas</a></li>
+        <li><a href="#iframe">Iframes</a></li>
+        <li><a href="#formulario">Formualrios</a></li>
+    </ul>
     <h2>Esto es un h2</h2> <!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
     <h3>Esto es
 
@@ -21,12 +34,13 @@
     <h5>Esto es un h5</h5><!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
     <br><br><br><br><br><br><br><br>
     <h6>Esto es un h6</h6><!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
-    <h6>Hola que tal hago que soy un texto en negrita. (ESTO NO SE HACEEEEEEE!)</h6><!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
-    
+    <h6>Hola que tal hago que soy un texto en negrita. (ESTO NO SE HACEEEEEEE!)</h6>
+    <!-- Etiqueta de Heading sirve para crear titulos y subtitulos-->
+
     <hr> <!-- Agrega una línea horizontal con un salto de linea-->
 
 
-    <h2>Parrafos</h2>
+    <h2 id="parrafo">Parrafos</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, ea eius molestiae, odit aliquam fuga maiores at
         magnam, ad tempora dolorum non dicta officia. Expedita, saepe! Provident id consequatur dolor.</p>
     <p>Lorem ipsum dolor sit amet.</p>
@@ -34,11 +48,214 @@
 
     <p title="Este es un parrafo de 5 palabras">Lorem ipsum dolor sit amet.</p>
     <p title="Este parrafo contiene una etiqueta span">Lorem ipsum dolor <span style="color: aqua;">sit amet
-            consectetur</span> adipisicing elit. Cupiditate, accusamus.</p> <!-- span sirve para referenciar texto o parte de él -->
+            consectetur</span> adipisicing elit. Cupiditate, accusamus.</p>
+    <!-- span sirve para referenciar texto o parte de él -->
 
     <hr>
-    <h2>Vinculos</h2>
+    <h2 id="vinculo">Vinculos</h2>
 
+    <a href="www.google.com" target="_blank">Ir a Google (No funciona)</a>
+    <br><br>
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    <br></br>
+    <a href="mailto:direccion@mail.com">Enviar mail</a>
+    <br><br>
+    <a
+        href="mailto:direccion@mail.com; direccion2@mail.com?cc=direccion3@mail.com&bcc=direccion4@mail.com&subject=Asunto del mail&body=Cuerpo del mail">Enviar mail completo</a>
+
+    <hr>
+
+    <h2 id="imagen">Imagenes</h2>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo HTML"
+        width="100" title="Imagen insertada desde internet">
+    <br><br>
+
+    <img src="./img/logo_html.png" alt="Logo HTML" height="75" title="Imagen insertada localmente">
+
+    <a href="https://code.visualstudio.com/" target="_blank"><img src="./img/logo_vsc.png" alt="Logo VSC"
+            width="150"></a>
+
+    <hr>
+
+    <h2 id="lista">Listas</h2>
+    <h3>Listas desordenadas</h3>
+
+    <ul>
+        <li>Listas</li>
+        <li>Tablas</li>
+        <li>Iframes</li>
+    </ul>
+    <h3>Listas ordenadas</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2
+            <ol type="a" start="6">
+                <li>Item 2.a</li>
+                <li>Item 2.b</li>
+                <li>Item 2.c</li>
+            </ol>
+        </li>
+        <li>Item 3</li>
+    </ol>
+    <h3>Listas de definicion</h3>
+    <dl>
+        <dt>Perro</dt>
+        <dd>Ladra</dd>
+        <dd>Tiene patas</dd>
+        <dd>Consume alimento</dd>
+        <dt>Auto</dt>
+        <dd>Toca bocina</dd>
+        <dd>Tiene ruedas</dd>
+        <dd>Consume combustible</dd>
+    </dl>
+    <hr>
+
+    <h2 id="tabla">Tablas</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F2C1</td>
+                <td>F2C2</td>
+                <td>F2C3</td>
+            </tr>
+            <tr>
+                <td>F3C1</td>
+                <td>F3C2</td>
+                <td>F3C3</td>
+            </tr>
+            <tr>
+                <td>F4C1</td>
+                <td>F4C2</td>
+                <td>F4C3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h3 id="iframe">Iframes</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6064362847596!2d-58.40543445907643!3d-34.63938467305427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb68f8b07b3%3A0x2e5ea98fbc3275a1!2sIFTS%20N%C2%B011!5e0!3m2!1ses!2sar!4v1774660674374!5m2!1ses!2sar"
+                target="iframe">Mapa IFTS11</a></li>
+        <li><a href="https://ifts11.edu.ar" target="iframe">Web IFTS11</a></li>
+        <li><a href="https://guarani-autogestionagencia.bue.edu.ar/" target="iframe">SIU Guarani</a></li>
+        <li><a href="https://www.youtube.com/embed/j_VjWO9CwsE" target="iframe">Video de Youtube</a></li>
+    </ul>
+
+    <iframe name="iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6064362847596!2d-58.40543445907643!3d-34.63938467305427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb68f8b07b3%3A0x2e5ea98fbc3275a1!2sIFTS%20N%C2%B011!5e0!3m2!1ses!2sar!4v1774660674374!5m2!1ses!2sar"
+        width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <hr>
+
+    <h2 id="formulario">Formularios</h2>
+
+    <form><!-- Formulario para enviar datos al servidor -->
+
+        <fieldset><!-- Agrupa campos relacionados -->
+            <legend>Datos personales</legend><!-- Título del grupo -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <br><br>
+
+            <label for="mail">Email:</label>
+            <input type="email" name="mail" id="mail">
+            <br><br>
+
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass">
+            <br><br>
+
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" min="0" max="200" step="3">
+            <br><br>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>Fechas y horas</legend>
+            <label for="date">Fecha</label>
+            <input type="date" name="date" id="date">
+            <br><br>
+
+            <label for="dateh">Fecha con hora</label>
+            <input type="datetime-local" name="dateh" id="dateh">
+            <br><br>
+
+            <label for="mes">Mes</label>
+            <input type="month" name="mes" id="mes">
+            <br><br>
+
+            <label for="week">Semana</label>
+            <input type="week" name="week" id="week">
+            <br><br>
+
+            <label for="hora">Hora</label>
+            <input type="time" name="hora" id="hora">
+        </fieldset>
+        <br><br>
+
+
+        <fieldset>
+            <legend>Selector de color</legend>
+            <label for="color">Seleccione color</label>
+            <input type="color" name="color" id="color">
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>CheckBox</legend>
+            <input type="checkbox" name="check1" id="check1"><!-- Permite seleccionar múltiples opciones -->
+            <label for="check1">Seleccionar opcion 1</label>
+            <br>
+            <input type="checkbox" name="check2" id="check2">
+            <label for="check2">Seleccionar opcion 2</label>
+            <br>
+            <input type="checkbox" name="check3" id="check3">
+            <label for="check3">Seleccionar opcion 3</label>
+            <br>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <input type="radio" name="radios" id="radio1" value="opcion1"><!-- Permite seleccionar una sola opción -->
+            <label for="radio1">opcion 1</label><br>
+            <input type="radio" name="radios" id="radio2" value="opcion2">
+            <label for="radio2">opcion 2</label><br>
+            <input type="radio" name="radios" id="radio3" value="opcion3">
+            <label for="radio3">opcion 3</label><br>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>Select</legend>
+            <label for="selector">Seleccionar opcion</label>
+            <select name="selector" id="selector"><!-- Lista desplegable -->
+                <option value="0" disabled selected>Elija una opcion</option>
+                <option value="1">Opcion 1</option>
+                <option value="2">Opcion 2</option>
+                <option value="3">Opcion 3</option>
+            </select>
+        </fieldset>
+        <br><br>
+
+        <input type="submit" value="Enviar"><!-- Envía el formulario -->
+        <input type="reset" value="Borrar"><!-- Limpia el formulario -->
+
+    </form>
+
+    <br><br><br>
+    <a href="#h1">Volver arriba</a>
 </body>
 
 </html>
