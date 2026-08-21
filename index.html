@@ -49,19 +49,19 @@
     <p title="Este es un parrafo de 5 palabras">Lorem ipsum dolor sit amet.</p>
     <p title="Este parrafo contiene una etiqueta span">Lorem ipsum dolor <span style="color: aqua;">sit amet
             consectetur</span> adipisicing elit. Cupiditate, accusamus.</p>
-    <!-- span sirve para referenciar texto o parte de él -->
+    <!-- span sirve para referenciar texto o parte de él, sirve a modo demotrativo en la práctica, pero recuerden que para aplicar estilos deben usar CSS SIEMPRE-->
 
     <hr>
     <h2 id="vinculo">Vinculos</h2>
 
-    <a href="www.google.com" target="_blank">Ir a Google (No funciona)</a>
+    <a href="www.google.com" target="_blank">Ir a Google (No funciona)</a> <!-- Este vínculo no funciona porque el atributo href no tiene el protocolo (http:// o https://) -->
     <br><br>
     <a href="https://www.google.com" target="_blank">Ir a Google</a>
     <br></br>
-    <a href="mailto:direccion@mail.com">Enviar mail</a>
+    <a href="mailto:direccion@mail.com">Enviar mail</a> <!-- Este vínculo abre el cliente de correo predeterminado del equipo -->
     <br><br>
     <a
-        href="mailto:direccion@mail.com; direccion2@mail.com?cc=direccion3@mail.com&bcc=direccion4@mail.com&subject=Asunto del mail&body=Cuerpo del mail">Enviar mail completo</a>
+        href="mailto:direccion@mail.com; direccion2@mail.com?cc=direccion3@mail.com&bcc=direccion4@mail.com&subject=Asunto del mail&body=Cuerpo del mail">Enviar mail completo</a> <!-- Este vínculo permite enviar un correo electrónico con destinatarios, copias y un asunto predefinido, toda esta informacion se pasa como parámetros en la URL -->
 
     <hr>
 
@@ -69,28 +69,29 @@
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="Logo HTML"
         width="100" title="Imagen insertada desde internet">
-    <br><br>
+    <br><br> <!-- Esta etiqueta img muestra una imagen externa, el atributo src contiene la URL de la imagen, el atributo alt contiene el texto alternativo en caso de que no se pueda cargar la imagen, el atributo width define el ancho de la imagen (recuerden que es a modo explicativo, los estilos siempre deben ir en CSS), el atributo title proporciona información adicional sobre la imagen cuando se posicionan con el mouse encima -->
 
-    <img src="./img/logo_html.png" alt="Logo HTML" height="75" title="Imagen insertada localmente">
+    <img src="./img/logo_html.png" alt="Logo HTML" height="75" title="Imagen insertada localmente"> <!-- Esta etiqueta muestra una imagen local, el atributo src contiene la ruta de la imagen, el atributo height define la altura de la imagen (recuerden que es a modo explicativo, los estilos siempre deben ir en CSS) -->
 
     <a href="https://code.visualstudio.com/" target="_blank"><img src="./img/logo_vsc.png" alt="Logo VSC"
-            width="150"></a>
+            width="150"></a> <!-- Este vínculo abre el sitio web de Visual Studio Code en una nueva pestaña, pero en vez de texto, el vinculo es una imagen -->
 
+    <!-- Para redimensionar imagenes es recomendable usar una sola medida, por ejemplo width o height, ya que el html se encarga de mantener la proporción -->
     <hr>
 
     <h2 id="lista">Listas</h2>
-    <h3>Listas desordenadas</h3>
+    <h3>Listas desordenadas</h3> <!-- Una lista desordenada es una lista en la que los elementos no tienen un orden específico -->
 
-    <ul>
-        <li>Listas</li>
+    <ul> <!-- ul es la etiqueta que se utiliza para crear una lista desordenada ul proviene de unordered list -->
+        <li>Listas</li> <!--  li es la etiqueta que se utiliza para crear un elemento de una lista -->
         <li>Tablas</li>
         <li>Iframes</li>
     </ul>
-    <h3>Listas ordenadas</h3>
-    <ol>
+    <h3>Listas ordenadas</h3> <!-- Una lista ordenada es una lista en la que los elementos tienen un orden específico -->
+    <ol> <!-- ol es la etiqueta que se utiliza para crear una lista ordenada ol proviene de ordered list -->
         <li>Item 1</li>
         <li>Item 2
-            <ol type="a" start="6">
+            <ol type="a" start="6"> <!-- las listas me permiten anidar otras listas, en este caso otra lista ordenada dentro de un item. type define el tipo de numeración y start define el número de inicio -->
                 <li>Item 2.a</li>
                 <li>Item 2.b</li>
                 <li>Item 2.c</li>
@@ -98,10 +99,10 @@
         </li>
         <li>Item 3</li>
     </ol>
-    <h3>Listas de definicion</h3>
-    <dl>
-        <dt>Perro</dt>
-        <dd>Ladra</dd>
+    <h3>Listas de definicion</h3> <!-- Una lista de definicion es una lista en la que se define un termino y su significado -->
+    <dl> <!--  dl es la etiqueta que se utiliza para crear una lista de definicion -->
+        <dt>Perro</dt> <!-- dt es la etiqueta que se utiliza para crear un término de definición -->
+        <dd>Ladra</dd> <!-- dd es la etiqueta que se utiliza para crear una definición -->
         <dd>Tiene patas</dd>
         <dd>Consume alimento</dd>
         <dt>Auto</dt>
@@ -113,17 +114,17 @@
 
     <h2 id="tabla">Tablas</h2>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Encabezado 1</th>
+    <table border="1"> <!-- table es la etiqueta que se utiliza para crear una tabla -->
+        <thead> <!-- thead es la etiqueta que se utiliza para crear el encabezado de la tabla -->
+            <tr> <!-- tr es la etiqueta que se utiliza para crear una fila en la tabla -->
+                <th>Encabezado 1</th><!-- th es la etiqueta que se utiliza para crear un encabezado de columna -->
                 <th>Encabezado 2</th>
                 <th>Encabezado 3</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> <!-- tbody es la etiqueta que se utiliza para crear el cuerpo de la tabla -->
             <tr>
-                <td>F2C1</td>
+                <td>F2C1</td> <!-- td es la etiqueta que se utiliza para crear una celda de datos -->
                 <td>F2C2</td>
                 <td>F2C3</td>
             </tr>
@@ -141,8 +142,8 @@
     </table>
 
     <hr>
-    <h3 id="iframe">Iframes</h3>
-    <ul>
+    <h3 id="iframe">Iframes</h3> <!-- Los iframes son elementos que permiten incrustar contenido de otra página web dentro de la página actual -->
+    <ul> <!-- cada elemento de esta lista es un enlace que se abre en el iframe -->
         <li><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6064362847596!2d-58.40543445907643!3d-34.63938467305427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb68f8b07b3%3A0x2e5ea98fbc3275a1!2sIFTS%20N%C2%B011!5e0!3m2!1ses!2sar!4v1774660674374!5m2!1ses!2sar"
                 target="iframe">Mapa IFTS11</a></li>
         <li><a href="https://ifts11.edu.ar" target="iframe">Web IFTS11</a></li>
@@ -153,30 +154,31 @@
     <iframe name="iframe"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.6064362847596!2d-58.40543445907643!3d-34.63938467305427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb68f8b07b3%3A0x2e5ea98fbc3275a1!2sIFTS%20N%C2%B011!5e0!3m2!1ses!2sar!4v1774660674374!5m2!1ses!2sar"
         width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- El iframe utiliza el atributo name para identificarlo y con el se vincula a la lista mediante el atributo target, cuando selecciono un item de la lista, el iframe muestra el contenido de la página web correspondiente porque modifica su src. Width y height definen el tamaño del iframe, style define el estilo del iframe (recueden que DEBEN utilizar CSS para definir estilos), allowfullscreen define si el iframe permite pantalla completa, loading define la forma en que se carga el iframe, referrerpolicy define la política de referente -->
+        <!-- La politica de referente establece las reglas para el envío de información de referencia al servidor, dentro de la informacion de referencia se envia la URL del sitio que enlaza al iframe. no-referrer-when-downgrade indica que no se enviará información de referencia cuando se realice una redirección a un dominio diferente de menor seguridad, http por ejemplo -->
 
     <hr>
 
-    <h2 id="formulario">Formularios</h2>
+    <h2 id="formulario">Formularios</h2> <!-- Los formularios son elementos que permiten recopilar datos de los usuarios -->
 
     <form><!-- Formulario para enviar datos al servidor -->
 
         <fieldset><!-- Agrupa campos relacionados -->
             <legend>Datos personales</legend><!-- Título del grupo -->
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <label for="nombre">Nombre:</label> <!-- Label para el campo de nombre, el atributo for vincula el label con el input mediante el id -->
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"> <!-- Un input de tipo texto me permite ingresar texto, el atributo name define el nombre del campo, el id define el identificador del campo, placeholder define el texto que se muestra como ayuda -->
             <br><br>
 
             <label for="mail">Email:</label>
-            <input type="email" name="mail" id="mail">
+            <input type="email" name="mail" id="mail"> <!-- Un input de tipo email me permite ingresar una dirección de correo electrónico -->
             <br><br>
 
             <label for="pass">Password</label>
-            <input type="password" name="pass" id="pass">
+            <input type="password" name="pass" id="pass"> <!-- Un input de tipo password me permite ingresar un texto que se muestra como puntos o asteriscos, para proteger la información -->
             <br><br>
 
             <label for="edad">Edad</label>
-            <input type="number" name="edad" id="edad" min="0" max="200" step="3">
+            <input type="number" name="edad" id="edad" min="0" max="200" step="3"> <!-- Un input de tipo number me permite ingresar un número, los atributos min, max y step definen los valores mínimo, máximo y el paso del número -->
             <br><br>
         </fieldset>
         <br><br>
@@ -184,23 +186,23 @@
         <fieldset>
             <legend>Fechas y horas</legend>
             <label for="date">Fecha</label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date"> <!-- Un input de tipo date me permite ingresar una fecha -->
             <br><br>
 
             <label for="dateh">Fecha con hora</label>
-            <input type="datetime-local" name="dateh" id="dateh">
+            <input type="datetime-local" name="dateh" id="dateh"> <!-- Un input de tipo datetime-local me permite ingresar una fecha y hora -->
             <br><br>
 
             <label for="mes">Mes</label>
-            <input type="month" name="mes" id="mes">
+            <input type="month" name="mes" id="mes"> <!-- Un input de tipo month me permite ingresar un mes -->
             <br><br>
 
             <label for="week">Semana</label>
-            <input type="week" name="week" id="week">
+            <input type="week" name="week" id="week"> <!-- Un input de tipo week me permite ingresar una semana -->
             <br><br>
 
             <label for="hora">Hora</label>
-            <input type="time" name="hora" id="hora">
+            <input type="time" name="hora" id="hora"> <!-- Un input de tipo time me permite ingresar una hora -->
         </fieldset>
         <br><br>
 
@@ -208,7 +210,7 @@
         <fieldset>
             <legend>Selector de color</legend>
             <label for="color">Seleccione color</label>
-            <input type="color" name="color" id="color">
+            <input type="color" name="color" id="color"> <!-- Un input de tipo color me permite seleccionar un color -->
         </fieldset>
         <br><br>
 
@@ -228,7 +230,7 @@
 
         <fieldset>
             <legend>Radio Buttons</legend>
-            <input type="radio" name="radios" id="radio1" value="opcion1"><!-- Permite seleccionar una sola opción -->
+            <input type="radio" name="radios" id="radio1" value="opcion1"><!-- Permite seleccionar una sola opción, todos los radios con el mismo name forman un grupo -->
             <label for="radio1">opcion 1</label><br>
             <input type="radio" name="radios" id="radio2" value="opcion2">
             <label for="radio2">opcion 2</label><br>
@@ -241,7 +243,7 @@
             <legend>Select</legend>
             <label for="selector">Seleccionar opcion</label>
             <select name="selector" id="selector"><!-- Lista desplegable -->
-                <option value="0" disabled selected>Elija una opcion</option>
+                <option value="0" disabled selected>Elija una opcion</option> <!-- disabled y selected se utilizan para establecer una opción por defecto que no se puede seleccionarse una vez desplegado el menú -->
                 <option value="1">Opcion 1</option>
                 <option value="2">Opcion 2</option>
                 <option value="3">Opcion 3</option>
@@ -255,7 +257,7 @@
     </form>
 
     <br><br><br>
-    <a href="#h1">Volver arriba</a>
+    <a href="#h1">Volver arriba</a> <!-- href que contiene #h1 apunta al elemento con id="h1", al hacer click en él se desplaza hasta ese elemento -->
 </body>
 
 </html>
